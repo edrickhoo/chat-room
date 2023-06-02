@@ -1,29 +1,8 @@
-import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import { io } from "socket.io-client";
+import { useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Room from "./pages/Room";
 import Home from "./pages/Home";
 import { Toaster } from "react-hot-toast";
-const socket = io("http://localhost:3000", {
-  transports: ["websocket", "polling"],
-});
-
-interface MessageProps {
-  mess: {
-    user: string;
-    message: string;
-  };
-}
-const MessageCard = ({ mess }: MessageProps) => {
-  const { user, message } = mess;
-  return (
-    <div className="flex space-x-2">
-      <span>{user}:</span> <p>{message}</p>
-    </div>
-  );
-};
 
 function App() {
   const [user, setUser] = useState("");

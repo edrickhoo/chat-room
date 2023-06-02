@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import toast from "react-hot-toast";
-const socket = io("http://localhost:3000", {
+const socket = io("https://chat-room-edric.fly.dev/", {
   transports: ["websocket", "polling"],
 });
 
