@@ -50,12 +50,10 @@ function Room({ user, setUser }: RoomProps) {
   useEffect(() => {
     socket.connect();
     socket.on("connection", (data) => {
-      console.log(data, "connection");
       setUserList(data);
     });
 
     socket.on("disc", (data) => {
-      console.log(data);
       setUserList([...data]);
     });
 
