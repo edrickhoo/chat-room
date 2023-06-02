@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Pokemon Classic";
+  src: url("//db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.eot");
+  src: url("//db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.svg#Pokemon Classic")
+      format("svg");
+}
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  font-family: "Pokemon Classic", Helvetica;
+}
