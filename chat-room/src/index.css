@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Pokemon";
+  src: url("font/Pokemon.ttf");
+}
+
 :root {
   line-height: 1.5;
   font-weight: 400;
@@ -17,5 +22,5 @@
 }
 
 * {
-  font-family: "Pokemon Classic", Helvetica;
+  font-family: "Pokemon", Helvetica;
 }
