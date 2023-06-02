@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Pokemon";
-  src: url("font/Pokemon.ttf");
+  src: url(fonts/Pokemon.woff2);
 }
 
 :root {
