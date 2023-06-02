@@ -12,7 +12,7 @@ function Home({ user, setUser }: HomeProps) {
   const navigate = useNavigate();
 
   const joinRoom = (roomId: string) => {
-    navigate(`/room/${roomId}`);
+    navigate(`room/${roomId}`);
   };
 
   const createRoom = () => {

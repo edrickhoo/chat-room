@@ -17,7 +17,7 @@ const MessageCard = ({ mess }: MessageProps) => {
   return (
     <div className="flex space-x-2">
       <span>{user}:</span>{" "}
-      <p className="max-w-[470px] break-words">{message}</p>
+      <p className="max-w-[470px] w-[170px] md:w-full break-words">{message}</p>
     </div>
   );
 };
@@ -103,14 +103,17 @@ function Room({ user, setUser }: RoomProps) {
 
   return (
     <>
-      <div className="max-w-[1440px] mx-auto flex flex-col items-center py-10 w-full">
-        <div className="flex max-w-[800px] items-center justify-end w-full mb-2 mr-28">
+      <div className="max-w-[1440px] mx-auto flex flex-col items-center py-10 w-full px-5">
+        <div className="flex max-w-[680px] items-center justify-between w-full mb-2">
+          <p className="text-xs">
+            Code: <span>{id}</span>
+          </p>
           <button onClick={copyURL}>Share</button>
         </div>
-        <div className="flex mb-4 w-full justify-center">
+        <div className="flex mb-4 w-full justify-center text-xs md:text-sm">
           <div
             ref={messageWindow}
-            className="border p-3  max-w-[600px] w-full h-[700px] overflow-y-scroll"
+            className="border p-3 max-w-[600px] w-full h-[700px] overflow-y-scroll overflow-x-auto"
           >
             <div className="pb-5">
               {messages &&
@@ -120,7 +123,7 @@ function Room({ user, setUser }: RoomProps) {
                 })}
             </div>
           </div>
-          <div className="w-[200px] h-[700px] overflow-auto border border-l-0 flex flex-col items-center">
+          <div className="w-[200px] h-[700px] overflow-auto border border-l-0 hidden md:flex flex-col items-center ">
             <div className="bold mb-3">User List</div>
             <div>
               {userList &&
@@ -135,10 +138,10 @@ function Room({ user, setUser }: RoomProps) {
             </div>
           </div>
         </div>
-        <div>
-          <form onSubmit={(e) => sendMessage(e)}>
+        <div className="max-w-[600px]">
+          <form className="flex" onSubmit={(e) => sendMessage(e)}>
             <input
-              className="border px-2"
+              className="border px-2 w-full"
               type="text"
               value={messageInput}
               onChange={(e) => setMessageInput(e.target.value)}
